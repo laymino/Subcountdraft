@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> OAuth Redirect</title>
+    <script>
+      window.onload = () =>{
+        const hash = window.location.hash.substring(1);
+        const params = new URLSearchParams(hash);
+        const accessToken = params.get('access_token);
+
+        if (accessToken) {
+          document.body.innerText = 'Access Token:' + accessToken;
+          console.log('OAuth Acess Token:', accessToken;
+        } else{
+          document.body.innerText = 'No token found';
+        }
+      };
+    </script>
+  </head>
+</html>
